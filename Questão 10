@@ -2,49 +2,20 @@ package lista_2;
 
 public class Décima {
 
-	public static void main(String[] args) {
-		
-		        double velocidadeVacuo = 299792458.0; 
+    public static void main(String[] args) {
+      
+        double velocidadeVacuo = 299792458.0; 
 
-		        
-		        double indiceRefraçãoMeioA = 1.33; 
-		        double indiceRefraçãoMeioB = 1.50; 
+      
+        double indiceRefraçãoMeioA = 1.33; 
+        double indiceRefraçãoMeioB = 1.50; 
 
-		        
-		        double velocidadeMeioA = velocidadeVacuo / indiceRefraçãoMeioA;
-		        double velocidadeMeioB = velocidadeVacuo / indiceRefraçãoMeioB;
+      
+        double velocidadeMeioA = velocidadeVacuo / indiceRefraçãoMeioA;
+        double velocidadeMeioB = velocidadeVacuo / indiceRefraçãoMeioB;
 
-	
-		        System.out.printf("Velocidade da luz no meio A: %.2f m/s%n", velocidadeMeioA);
-		        System.out.printf("Velocidade da luz no meio B: %.2f m/s%n", velocidadeMeioB);
-		    }
-		
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	}
-
+   
+        System.out.printf("Velocidade da luz no meio A: %.2f m/s%n", velocidadeMeioA);
+        System.out.printf("Velocidade da luz no meio B: %.2f m/s%n", velocidadeMeioB);
+    }
 }
