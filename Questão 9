@@ -4,76 +4,48 @@ import java.util.Scanner;
 
 public class Nona {
 
-	public static void main(String[] args) {
-		
-		        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-		       System.out.println("Digite o primeiro número:");
-		        double num1 = sc.nextDouble();
+        try {
+            System.out.println("Digite o primeiro número:");
+            double num1 = sc.nextDouble();
 
-		        System.out.println("Digite o segundo número:");
-		        double num2 = sc.nextDouble();
+            System.out.println("Digite o segundo número:");
+            double num2 = sc.nextDouble();
 
-		       
-		        System.out.println("Digite a operação (+, -, *, /):");
-		        char operacao = sc.next().charAt(0);
+            System.out.println("Digite a operação (+, -, *, /):");
+            char operacao = sc.next().charAt(0);
 
-		       
-		        double resultado = 0;
+            double resultado = 0;
 
-		        
-		        switch (operacao) {
-		            case '+':
-		                resultado = num1 + num2;
-		                break;
-		            case '-':
-		                resultado = num1 - num2;
-		                break;
-		            case '*':
-		                resultado = num1 * num2;
-		                break;
-		            case '/':
-		                resultado = num2 != 0 ? num1 / num2 : Double.NaN; // Evita divisão por zero
-		                break;
-		            default:
-		                System.out.println("Operação inválida. Por favor, digite +, -, * ou /.");
-		                sc.close();
-		                return;
-		        }
+            switch (operacao) {
+                case '+':
+                    resultado = num1 + num2;
+                    break;
+                case '-':
+                    resultado = num1 - num2;
+                    break;
+                case '*':
+                    resultado = num1 * num2;
+                    break;
+                case '/':
+                    resultado = num2 != 0 ? num1 / num2 : Double.NaN; 
+                    break;
+                default:
+                    System.out.println("Operação inválida. Por favor, digite +, -, * ou /.");
+                    return;
+            }
 
-		       
-		        if (!Double.isNaN(resultado)) {
-		            System.out.printf("Resultado: %.2f %c %.2f = %.2f%n", num1, operacao, num2, resultado);
-		        } else {
-		            System.out.println("Erro: Divisão por zero não é permitida.");
-		        }
-
-		        sc.close();
-		    }
-		
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	}
-
+            if (!Double.isNaN(resultado)) {
+                System.out.printf("Resultado: %.2f %c %.2f = %.2f%n", num1, operacao, num2, resultado);
+            } else {
+                System.out.println("Erro: Divisão por zero não é permitida.");
+            }
+        } catch (Exception e) {
+            System.out.println("Erro: Entrada inválida. Certifique-se de inserir números válidos.");
+        } finally {
+            sc.close();
+        }
+    }
 }
