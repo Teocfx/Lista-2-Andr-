@@ -1,0 +1,13 @@
+package lista_2;
+
+public class Sétima {
+
+	public static void main(String[] args) {
+
+		int idade = 25;
+
+		System.out.printf("Eu tenho %d anos!%n", idade);
+
+	}
+
+}
