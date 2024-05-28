@@ -1,0 +1,33 @@
+package lista_2;
+
+import java.util.Scanner;
+
+public class Primeira {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digite sua altura");
+		double altura = sc.nextDouble();
+
+		System.out.println("Digite seu sexo (M para masculino, F para feminino):");
+		char sexo = sc.next().charAt(0);
+
+		double pesoIdeal;
+
+		if (sexo == 'M' || sexo == 'm') {
+			pesoIdeal = (72.7 * altura) - 58;
+		} else if (sexo == 'F' || sexo == 'f') {
+			pesoIdeal = (62.1 * altura) - 44.7;
+		} else {
+			System.out.println("Sexo inválido. Por favor, insira 'M' para masculino ou 'F' para feminino.");
+			sc.close();
+			return;
+		}
+
+		System.out.printf("Seu peso ideal é: %.2f kg%n", pesoIdeal);
+
+		sc.close();
+	}
+
+}
