@@ -1,0 +1,17 @@
+package lista_2;
+
+public class Oitava {
+
+	public static void main(String[] args) {
+
+		double salarioMensal = 100000.00;
+
+		double salarioReajustado = salarioMensal * 1.01;
+
+		System.out.printf("Salário mensal sem reajuste: $%.2f%n", salarioMensal);
+
+		System.out.printf("Salário mensal com reajuste de 1%%: $%.2f%n", salarioReajustado);
+
+	}
+
+}
