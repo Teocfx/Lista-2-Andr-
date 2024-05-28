@@ -1,0 +1,42 @@
+package lista_2;
+
+import java.util.Scanner;
+
+public class Quinta {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digite o dia de nascimento:");
+		int diaNascimento = sc.nextInt();
+
+		System.out.println("Digite o mês de nascimento:");
+		int mesNascimento = sc.nextInt();
+
+		System.out.println("Digite o ano de nascimento:");
+		int anoNascimento = sc.nextInt();
+
+		System.out.println("Digite o dia de hoje:");
+		int diaAtual = sc.nextInt();
+
+		System.out.println("Digite o mês atual:");
+		int mesAtual = sc.nextInt();
+
+		System.out.println("Digite o ano atual:");
+		int anoAtual = sc.nextInt();
+
+		int diasNascimento = diaNascimento + (mesNascimento * 30) + (anoNascimento * 365);
+		int diasAtual = diaAtual + (mesAtual * 30) + (anoAtual * 365);
+
+		int diferencaDias = diasAtual - diasNascimento;
+
+		int idade = diferencaDias / 365;
+
+		System.out.printf("Idade: %d anos%n", idade);
+
+		sc.close();
+
+	}
+
+}
